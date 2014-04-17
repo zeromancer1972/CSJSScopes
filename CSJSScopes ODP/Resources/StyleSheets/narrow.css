@@ -1,0 +1,7 @@
+.lotusui30 .lotusBanner .lotusInner,.lotusui30 .lotusBannerExt .lotusWrapper,.lotusui30 .lotusTitleBar2 .lotusWrapper,.lotusui30 .lotusTitleBarExt .lotusWrapper,.lotusui30_body .lotusMain, .lotusui30 .lotusPlaceBar
+	{
+	margin: 0 auto;
+	padding: 0 5px;
+	min-width: 980px !important;
+	max-width: 1190px !important;
+}

@@ -1,0 +1,22 @@
+
+<theme extends="oneuiv3.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd">
+	<resource>
+		<content-type>text/css</content-type>
+		<href>adapt.css</href>
+	</resource>
+	<resource>
+		<content-type>text/css</content-type>
+		<href>narrow.css</href>
+	</resource>
+
+	<control override="false">
+		<!-- set a default page name unless you define it in the page itself -->
+		<name>ViewRoot</name>
+		<property>
+			<name>pageTitle</name>
+			<value>#{javascript:@DbTitle()}</value>
+		</property>
+
+	</control>
+</theme>

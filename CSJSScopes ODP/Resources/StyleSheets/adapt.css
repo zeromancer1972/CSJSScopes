@@ -1,0 +1,110 @@
+body.lotusui30dojo {
+	background-color: #fff;
+}
+
+body.oneuinext {
+	background-color: #f0f0f0;
+}
+
+/* OneUI v3.0.2 hacks*/
+.lotusui30 .lotusBanner ul.lotusUtility li a,.lotusui30 .lotusBanner ul li a
+	{
+	padding: 10px 16px 7px 16px;
+}
+
+.lotusui30dojo .dijitTabContainerTopStrip {
+	border: none;
+	background: none;
+}
+
+.lotusui30 .lotusPlaceBar .lotusInner {
+	padding: 8px 0;
+}
+
+.xspMessage {
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.lotusui30 .lotusMenu li a,.lotusui30 .lotusMenu li.lotusSelected a {
+	font-weight: normal;
+}
+
+.lotusui30 .lotusTitleBar2.lotusTitleBar2Tabs {
+	background: none #fff;
+}
+
+.lotusui30 .lotusBanner ul.lotusInlinelist li a:hover {
+	font-weight: bold !important;
+}
+
+.lotusui30 .lotusMenu .lotusMenuHeader a,.lotusui30 .lotusMenu .lotusMenuHeader a:visited,.lotusui30 .lotusMenu .lotusMenuHeader a:hover,.lotusui30 .lotusMenu .lotusMenuHeader a:focus,.lotusui30 .lotusMenu .lotusMenuHeader a:active
+	{
+	color: #fff;
+	text-decoration: none;
+}
+
+.lotusui30_layout .lotusColLeft {
+	margin-left: -21px;
+}
+
+.lotusui30 .lotusTabs li {
+	font-size: 1.1em;
+}
+
+.lotusui30 .lotusTabs li a {
+	color: #0075a3;
+}
+
+.lotusui30 .lotusTabs li.lotusSelected a {
+	font-weight: normal;
+}
+
+.lotusui30 .lotusBanner .lotusDropDownSprite {
+	background-position: 0 -656px;
+}
+
+/* Grid Row - Default Styles */
+.dojoxGridRow tr {
+	background-color: #fff;
+	color: #000;
+}
+
+/* Grid Header - Styles */
+.dojoxGridHeader .dojoxGridCell {
+	background-image: none !important;
+	background-color: #fff !important;
+}
+
+.dojoxGridHeader .dojoxGridCell div {
+	color: #000;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.lotusui30 .lotusMenu .lotusMenuHeader a,.lotusui30 .lotusMenu .lotusMenuHeader a:visited,.lotusui30 .lotusMenu .lotusMenuHeader a:hover,.lotusui30 .lotusMenu .lotusMenuHeader a:focus,.lotusui30 .lotusMenu .lotusMenuHeader a:active
+	{
+	color: #fff;
+}
+
+.lotusui30 .lotusMenu .lotusMenuHeader {
+	padding: 0;
+}
+
+.lotusui30 .lotusMenu li.lotusSelected a,.lotusui30 .lotusMenu li.lotusSelected a:visited,.lotusui30 .lotusMenu li.lotusSelected a:hover,.lotusui30 .lotusMenu li.lotusSelected a:focus,.lotusui30 .lotusMenu li.lotusSelected a:active,.lotusui30 .lotusMenu .lotusHeaderSelected
+	{
+	background-color: #c65511;
+	border: 0;
+	-moz-box-shadow: 0 1px 1px #c65511 inset, 0 -1px 0 #000 inset;
+	-webkit-box-shadow: 0 1px 1px #c65511 inset, 0 -1px 0 #000 inset;
+	box-shadow: 0 1px 1px #c65511 inset, 0 -1px 0 #000 inset;
+}
+
+.lotusui30 .lotusMenu .lotusMenuSubsection li a {
+	padding-left: 24px;
+}
+
+.lotusui30 .lotusMenu .lotusMenuHeader {
+	margin-top: 0;
+}

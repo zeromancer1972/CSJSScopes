@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.resources>
+		<xp:script src="/scope.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+	<xc:layout title="CSJS Scope Handling">
+		<xp:this.facets>
+			<xp:div xp:key="facetMiddle">
+				<h1>SSJS - CSJS</h1>
+				<xp:div>
+					<xp:div>
+						Enter a value to be set in a session scoped
+						variable called
+						"test"
+					</xp:div>
+					<xp:inputText id="inputText1"></xp:inputText>
+					<xp:button value="push with SSJS" id="button1">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="norefresh">
+							<xp:this.action><![CDATA[#{javascript:sessionScope.put("test", getComponent("inputText1").getValue());}]]></xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</xp:div>
+				<xp:div>
+					<xp:div>Now get it via CSJS REST call</xp:div>
+					<xp:inputText id="inputText2"></xp:inputText>
+					<xp:button value="get with CSJS" id="button2">
+						<xp:eventHandler event="onclick" submit="false">
+							<xp:this.script><![CDATA[getScopeValue("session", "test", "#{id:inputText2}");
+]]></xp:this.script>
+						</xp:eventHandler>
+					</xp:button>
+				</xp:div>
+				<h1>CSJS - SSJS</h1>
+				<xp:div>
+					<xp:div>
+						Enter a value to be set in a session scoped
+						variable called
+						"test2"
+					</xp:div>
+					<xp:inputText id="inputText3"></xp:inputText>
+					<xp:button value="push with CSJS" id="button3">
+						<xp:eventHandler event="onclick" submit="false">
+							<xp:this.script><![CDATA[setScopeValue("session", "test2", dojo.byId("#{id:inputText3}").value);]]></xp:this.script>
+						</xp:eventHandler>
+					</xp:button>
+				</xp:div>
+				<xp:div>
+					<xp:div>Now get it via CSJS REST call</xp:div>
+					<xp:inputText id="inputText4"></xp:inputText>
+					<xp:button value="get with SSJS" id="button4">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="partial" refreshId="inputText4">
+							<xp:this.action><![CDATA[#{javascript:getComponent("inputText4").setValue(sessionScope.get("test2"));}]]></xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</xp:div>
+			</xp:div>
+		</xp:this.facets>
+	</xc:layout>
+</xp:view>

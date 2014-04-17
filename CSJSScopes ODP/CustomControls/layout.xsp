@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xp:this.beforePageLoad><![CDATA[#{javascript:var url = facesContext.getExternalContext().getRequest().getRequestURI();
+if(url.indexOf(".xsp")==-1){
+	if(url.endsWith("/")){
+		url = url.substr(0, url.length-1)
+	}
+	context.redirectToPage(url+view.getPageName())
+}}]]></xp:this.beforePageLoad>
+	<xe:applicationLayout id="applicationLayout1">
+		<xp:callback facetName="facetMiddle" id="facetMiddle"></xp:callback>
+		<xe:this.facets>
+			<xp:callback facetName="facetRight" id="facetRight"
+				xp:key="RightColumn">
+			</xp:callback>
+			<xp:callback facetName="facetLeft" id="facetLeft"
+				xp:key="LeftColumn">
+			</xp:callback>
+		</xe:this.facets>
+		<xe:this.configuration>
+			<xe:oneuiApplication footer="false"
+				placeBarName="#{javascript:compositeData.title}">
+				<xe:this.footerLinks>
+					<xe:basicContainerNode label="Container 1">
+						<xe:this.children>
+							<xe:basicLeafNode label="Link 1" href="/"></xe:basicLeafNode>
+							<xe:basicLeafNode label="Link 2" href="/"></xe:basicLeafNode>
+						</xe:this.children>
+					</xe:basicContainerNode>
+					<xe:basicContainerNode label="Container 2">
+						<xe:this.children>
+							<xe:basicLeafNode label="Link 1" href="/"></xe:basicLeafNode>
+							<xe:basicLeafNode label="Link 2" href="/"></xe:basicLeafNode>
+						</xe:this.children>
+					</xe:basicContainerNode>
+				</xe:this.footerLinks>
+				<xe:this.bannerApplicationLinks>
+
+					<xe:basicLeafNode label="CSJS Scopes"></xe:basicLeafNode>
+				</xe:this.bannerApplicationLinks>
+			</xe:oneuiApplication>
+		</xe:this.configuration>
+	</xe:applicationLayout></xp:view>
