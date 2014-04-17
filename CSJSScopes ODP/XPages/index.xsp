@@ -47,7 +47,7 @@
 					</xp:button>
 				</xp:div>
 				<xp:div>
-					<xp:div>Now get it via CSJS REST call</xp:div>
+					<xp:div>Now get it via SSJS call</xp:div>
 					<xp:inputText id="inputText4"></xp:inputText>
 					<xp:button value="get with SSJS" id="button4">
 						<xp:eventHandler event="onclick" submit="true"
